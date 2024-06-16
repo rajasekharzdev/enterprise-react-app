@@ -2,3 +2,7 @@ li {
   display: inline;
   padding-left: 20px;
 }
+
+li:first-child {
+  padding-left: 0px;
+}
