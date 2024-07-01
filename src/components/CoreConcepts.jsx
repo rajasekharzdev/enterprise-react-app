@@ -1,9 +1,16 @@
-export default function CoreConcepts({ image, title, description }) {
+import CoreConcept from "./CoreConcept";
+import { CORE_CONCEPTS } from "./mock/data";
+export default function CoreConcepts() {
   return (
-    <li>
-      <img src={image} alt=""></img>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
+    <>
+      <section id="core-concepts">
+        <h2>Core Concepts</h2>
+        <ul>
+          {CORE_CONCEPTS.map((conceptItem, i) => {
+            return <CoreConcept key={i} {...conceptItem} />;
+          })}
+        </ul>
+      </section>
+    </>
   );
 }
